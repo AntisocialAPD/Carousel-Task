@@ -1,1 +1,114 @@
 
+/* Universal Selector to remove default margin & padding */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Image Carousel container */
+.carousel_container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Styling the h2 Tag */
+h2, p {
+    text-align: center;
+    color: lavenderblush;
+}
+/* Preventing images from displaying immediately */
+.slides {
+  display: none;
+  height: auto;
+}
+
+/* Styling the images */
+.images {
+ float: center;
+ width: 100%;
+ object-fit: cover;
+ border-radius: 30px;
+ padding: 0;
+ margin: 0;
+}
+
+body {
+  background-color: #070707;
+ 
+}
+/* Styling the previous & next directional icons */
+.previous, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Positioning the "next button" */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Property to make directional button show only when images is hovered*/
+.previous, .next{
+  opacity: 0;
+} 
+
+
+.previous:hover, .next:hover { 
+  opacity: 1;
+}
+
+
+
+/* click text number identifier ( etc) */
+.clicknumber {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+/* Styling the Dots */
+.dots {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: lavenderblush;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-right: 15px;
+  
+}
+
+.active, .dots:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.85s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
